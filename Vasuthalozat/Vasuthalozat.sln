@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31605.320
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vasuthalozat", "Vasuthalozat\Vasuthalozat.csproj", "{BEBBE50A-67E0-46EB-89A0-5A9099CAF24C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VonathalozatADMIN", "VonathalozatADMIN\VonathalozatADMIN.csproj", "{87564083-EAD7-4685-BFF7-B7483C2E4454}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BEBBE50A-67E0-46EB-89A0-5A9099CAF24C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BEBBE50A-67E0-46EB-89A0-5A9099CAF24C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BEBBE50A-67E0-46EB-89A0-5A9099CAF24C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BEBBE50A-67E0-46EB-89A0-5A9099CAF24C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{87564083-EAD7-4685-BFF7-B7483C2E4454}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{87564083-EAD7-4685-BFF7-B7483C2E4454}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{87564083-EAD7-4685-BFF7-B7483C2E4454}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{87564083-EAD7-4685-BFF7-B7483C2E4454}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {433B0C75-22C6-4AA8-B001-4D3F0909DCF9}
+	EndGlobalSection
+EndGlobal
