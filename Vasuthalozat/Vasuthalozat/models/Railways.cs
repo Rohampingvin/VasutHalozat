@@ -15,9 +15,9 @@ namespace Vasuthalozat.models
         public int distance { get; set; }
          [Required]
          [MaxLength(100)]
-        public citis from { get; set; }
+        public Cities from { get; set; }
         [Required]
         [MaxLength(100)]
-        public citis to { get; set; }
+        public Cities to { get; set; }
     }
 }

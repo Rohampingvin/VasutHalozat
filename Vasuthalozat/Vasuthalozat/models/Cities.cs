@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Vasuthalozat.models
 {
-    class citis
+    class Cities
     {
     }
 }
