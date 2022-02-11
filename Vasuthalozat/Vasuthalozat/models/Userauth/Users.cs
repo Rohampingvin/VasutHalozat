@@ -8,12 +8,13 @@ using System.Threading.Tasks;
 using Vasuthalozat.models.Userauth;
 using static Vasuthalozat.models.Userauth.Role;
 
-namespace Vasuthalozat.models
+namespace Vasuthalozat.models.Userauth
 {
     [Table("USERS")]
     class Users
     {
         [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public long Id { get; set; }
         public string Name { get; set; }
         public string UserName { get; set; }

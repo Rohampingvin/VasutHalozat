@@ -10,9 +10,28 @@ namespace Vasuthalozat.Repository
 {
     class VasutDbContext : DbContext
     {
+        private static VasutDbContext context = null;
+        public static VasutDbContext Instance
+        {
+            get
+            {
+                if (context == null)
+                {
+                    context = new VasutDbContext();
+                }
+                return context;
+            }
+        }
+
+        private VasutDbContext()
+        {
+
+            Database.EnsureCreated();
+
+        }
         public DbSet<Cities> cities { get; set;}
         public DbSet<Railways> Railyways { get; set; }
-        public DbSet<Users> Users { get; set; }
+
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

@@ -8,7 +8,7 @@
         Title="MainWindow" Height="450" Width="800">
     <Grid>
         <Button Content="Bejelentkezés" HorizontalAlignment="Left" Margin="255,249,0,0" VerticalAlignment="Top" RenderTransformOrigin="11.03,0.704" Height="28" Width="242" Click="Button_Click"/>
-        <Button Content="Regisztráció" HorizontalAlignment="Left" Margin="255,282,0,0" VerticalAlignment="Top" Width="242" Height="26"/>
+        <Button Content="Regisztráció" HorizontalAlignment="Left" Margin="255,282,0,0" VerticalAlignment="Top" Width="242" Height="26" Click="Button_Click_1"/>
         <Label Content="Jelszó:" HorizontalAlignment="Left" Margin="110,199,0,0" VerticalAlignment="Top" Width="46"/>
         <Label Content="Felhasználónév:" HorizontalAlignment="Left" Margin="61,158,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.179,0.696" Width="99"/>
         <TextBox HorizontalAlignment="Left" Margin="256,158,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="241" Height="31"/>
