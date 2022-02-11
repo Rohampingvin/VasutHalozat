@@ -9,23 +9,23 @@ using Vasuthalozat.models.Userauth;
 
 namespace Vasuthalozat.Repository
 {
-    class UserDbContext : DbContext
+   public class UserDbContext : DbContext
     {
-        private static UserDbContext? userDbContext;
+        private static UserDbContext? userContext;
 
         public static UserDbContext Instance
         {
             get
             {
-                if (userDbContext == null)
+                if (userContext == null)
                 {
-                    userDbContext = new UserDbContext();
+                    userContext = new UserDbContext();
                 }
-                return userDbContext;
+                return userContext;
             }
         }
 
-        public DbSet<Users> Users { get; set; }
+        public DbSet<User> Users { get; set; }
 
         private UserDbContext()
         {

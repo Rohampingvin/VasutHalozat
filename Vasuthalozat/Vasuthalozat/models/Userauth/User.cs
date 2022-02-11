@@ -11,10 +11,9 @@ using static Vasuthalozat.models.Userauth.Role;
 namespace Vasuthalozat.models.Userauth
 {
     [Table("USERS")]
-    class Users
+    class User
     {
         [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public long Id { get; set; }
         public string Name { get; set; }
         public string UserName { get; set; }
@@ -22,7 +21,7 @@ namespace Vasuthalozat.models.Userauth
         public string Password { get; set; }
         public Roles Role { get; set; }
 
-        public Users(string name, string userName, string email, string password, Roles role)
+        public User(string name, string userName, string email, string password, Roles role)
         {
             Name = name;
             UserName = userName;
