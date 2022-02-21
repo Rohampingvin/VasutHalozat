@@ -1,0 +1,22 @@
+﻿<Window x:Class="VasuthalozatPublic.View.RailwayPicker"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:VasuthalozatPublic.View"
+        mc:Ignorable="d"
+        Title="RailwayPicker" Style="{StaticResource WorkingWindowStyle}">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="7*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Label Grid.Column="0" Grid.Row="0" Style="{StaticResource SmallerTitleLabelStyle}" x:Name="la_title" Content="Üdv: "></Label>
+        <Button Grid.Column="1" Grid.Row="0" Style="{StaticResource LogoutButtonStyle}" x:Name="btn_logout" Click="btn_logout_Click">Kijelentkezés</Button>
+    </Grid>
+</Window>
