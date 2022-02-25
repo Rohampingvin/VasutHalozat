@@ -23,6 +23,9 @@ namespace VasuthalozatPublic.View
         private RailwayPickerController railwayPickerController = new RailwayPickerController();
         public RailwayPicker()
         {
+            WindowStartupLocation = WindowStartupLocation.Manual;
+            Left = 100;
+            Top = 200;
             InitializeComponent();
             railwayPickerController.SubscibeToLogout(UserAuthenticator_LogoutEvent);
         }
@@ -30,8 +33,7 @@ namespace VasuthalozatPublic.View
         private void UserAuthenticator_LogoutEvent()
         {
             LoginWindow loginWindow = new LoginWindow();
-            loginWindow.Left = this.Left;
-            loginWindow.Top = this.Top;
+            
             LoginWindow.GetWindow(loginWindow).Show();
             railwayPickerController.UnsubscribeFromLogout(UserAuthenticator_LogoutEvent);
             this.Close();

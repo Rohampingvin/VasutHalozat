@@ -22,9 +22,13 @@ namespace VasuthalozatPublic.View
     /// </summary>
     public partial class LoginWindow : Window
     {
+
         private LoginController loginController = new LoginController();
         public LoginWindow()
         {
+            WindowStartupLocation = WindowStartupLocation.Manual;
+            Left = 500;
+            Top = 200;
             InitializeComponent();
         }
 

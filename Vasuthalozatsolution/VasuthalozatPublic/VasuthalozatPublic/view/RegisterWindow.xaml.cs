@@ -24,6 +24,9 @@ namespace VasuthalozatPublic.View
         private RegisterController registerController = new RegisterController();
         public RegisterWindow()
         {
+            WindowStartupLocation = WindowStartupLocation.Manual;
+            Left = 500;
+            Top = 200;
             InitializeComponent();
         }
 
