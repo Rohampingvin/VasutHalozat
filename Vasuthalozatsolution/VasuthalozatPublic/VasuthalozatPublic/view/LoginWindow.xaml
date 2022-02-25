@@ -5,22 +5,26 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:VasuthalozatPublic.View"
         mc:Ignorable="d"
-        Title="LoginWindow" Style="{StaticResource BaseWindowStyle}" d:DesignWidth="335.853" d:DesignHeight="217.655">
+        Title="LoginWindow" Style="{StaticResource BaseWindowStyle}" d:DesignWidth="576.994" d:DesignHeight="389.037">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"></ColumnDefinition>
-            <ColumnDefinition Width="3*"></ColumnDefinition>
-            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="2*"></ColumnDefinition>
         </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+        </Grid.RowDefinitions>
+        <Label Grid.Column="0" Style="{StaticResource TitleLabelStyle}" FontSize="18" Margin="40,122,0,216">User Name:
+        </Label>
+        <Label Grid.Column="0" Style="{StaticResource TitleLabelStyle}" FontSize="18" Margin="66,198,0,143" x:Name="Jelszolabel">Password:</Label>
         <StackPanel Grid.Column="1">
             <Label Style="{StaticResource TitleLabelStyle}" Content="Bejelentkezés"/>
-        <TextBox Style="{StaticResource LoginTextBoxStyle}" x:Name="tb_Username"/>
-        <PasswordBox Style="{StaticResource LoginPasswordBoxStyle}" x:Name="tb_Password"/>
-        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-            <Button Style="{StaticResource BaseButtonStyle}" x:Name="btn_login" Click="btn_login_Click">Bejelentkezés</Button>
-            <Button Style="{StaticResource BaseButtonStyle}" x:Name="btn_register" Click="btn_register_Click">Regisztráció</Button>
+            <TextBox Style="{StaticResource LoginTextBoxStyle}" x:Name="tb_Username"/>
+            <PasswordBox Style="{StaticResource LoginPasswordBoxStyle}" x:Name="tb_Password"/>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" RenderTransformOrigin="0.499,0.464">
+                <Button Style="{StaticResource BaseButtonStyle}" x:Name="btn_login" Click="btn_login_Click">Bejelentkezés</Button>
+                <Button Style="{StaticResource BaseButtonStyle}" x:Name="btn_register" Click="btn_register_Click">Regisztráció</Button>
+            </StackPanel>
         </StackPanel>
-        </StackPanel>
-        
+
     </Grid>
 </Window>

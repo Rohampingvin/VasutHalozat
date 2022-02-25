@@ -136,7 +136,9 @@
             <Setter Property="Background" Value="#535c68"></Setter>
             <Setter Property="Foreground" Value="#c7ecee"></Setter>
         </Style>
-       
+        <Style TargetType="Viewbox" x:Key="">
+            
+        </Style>
         
     </Application.Resources>
 </Application>
