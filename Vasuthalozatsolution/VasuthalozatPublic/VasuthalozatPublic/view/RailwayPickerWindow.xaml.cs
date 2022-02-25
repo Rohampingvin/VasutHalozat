@@ -33,7 +33,8 @@ namespace VasuthalozatPublic.View
         private void UserAuthenticator_LogoutEvent()
         {
             LoginWindow loginWindow = new LoginWindow();
-            
+            loginWindow.Left = this.Left;
+            loginWindow.Top = this.Top;
             LoginWindow.GetWindow(loginWindow).Show();
             railwayPickerController.UnsubscribeFromLogout(UserAuthenticator_LogoutEvent);
             this.Close();

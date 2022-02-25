@@ -20,7 +20,7 @@
             <Setter Property="FontWeight" Value="ExtraLight"></Setter>
             <Setter Property="Background" Value="Transparent"></Setter>
             <Setter Property="Foreground" Value="#c7ecee"></Setter>
-            <Setter Property="BorderThickness" Value="0 0 0 1"></Setter>
+            <Setter Property="BorderThickness" Value="0 0 0 3"></Setter>
             <Setter Property="BorderBrush" Value="#c7ecee"></Setter>
         </Style>
         <Style TargetType="TextBox" BasedOn="{StaticResource ResourceKey=BaseTextBoxStyle}" x:Key="LoginTextBoxStyle">
@@ -34,7 +34,7 @@
             <Setter Property="FontWeight" Value="ExtraLight"></Setter>
             <Setter Property="Background" Value="Transparent"></Setter>
             <Setter Property="Foreground" Value="#c7ecee"></Setter>
-            <Setter Property="BorderThickness" Value="0 0 0 1"></Setter>
+            <Setter Property="BorderThickness" Value="0 0 0 3"></Setter>
             <Setter Property="BorderBrush" Value="#c7ecee"></Setter>
         </Style>
         <Style TargetType="PasswordBox" BasedOn="{StaticResource ResourceKey=BasePasswordBoxStyle}" x:Key="LoginPasswordBoxStyle">
@@ -50,7 +50,7 @@
             <Setter Property="BorderThickness" Value="1"></Setter>
             <Setter Property="Margin" Value="40 40 40 0"></Setter>
             <Setter Property="Foreground" Value="#c7ecee"></Setter>
-            <Setter Property="FontFamily" Value="Helvetica"></Setter>
+            <Setter Property="FontFamily" Value="Microsoft Sans Serif"></Setter>
             <Setter Property="FontWeight" Value="ExtraLight"></Setter>
             <Setter Property="FontStretch" Value="Expanded"></Setter>
             <Setter Property="FontSize" Value="15"></Setter>
