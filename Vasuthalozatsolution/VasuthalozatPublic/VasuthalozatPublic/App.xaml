@@ -136,8 +136,14 @@
             <Setter Property="Background" Value="#535c68"></Setter>
             <Setter Property="Foreground" Value="#c7ecee"></Setter>
         </Style>
-        <Style TargetType="Viewbox" x:Key="">
-            
+        <Style TargetType="Label" x:Key="Jelszolabel">
+            <Setter Property="FontSize" Value="30"></Setter>
+            <Setter Property="HorizontalContentAlignment" Value="Right"></Setter>
+            <Setter Property="VerticalAlignment" Value="Center"></Setter>
+            <Setter Property="FontFamily" Value="Microsoft Sans Serif"></Setter>
+            <Setter Property="FontWeight" Value="ExtraLight"></Setter>
+            <Setter Property="Foreground" Value="#c7ecee"></Setter>
+            <Setter Property="Margin" Value="0"></Setter>
         </Style>
         
     </Application.Resources>

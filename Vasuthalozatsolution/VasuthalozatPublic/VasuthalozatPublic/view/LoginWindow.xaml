@@ -9,14 +9,10 @@
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"></ColumnDefinition>
-            <ColumnDefinition Width="2*"></ColumnDefinition>
+            <ColumnDefinition Width="3*"></ColumnDefinition>
         </Grid.ColumnDefinitions>
-        <Grid.RowDefinitions>
-        </Grid.RowDefinitions>
-        <Label Grid.Column="0" Style="{StaticResource TitleLabelStyle}" FontSize="18" Margin="40,122,0,216">User Name:
-        </Label>
-        <Label Grid.Column="0" Style="{StaticResource TitleLabelStyle}" FontSize="18" Margin="66,198,0,143" x:Name="Jelszolabel">Password:</Label>
-        <StackPanel Grid.Column="1">
+
+        <StackPanel Grid.Column="1" >
             <Label Style="{StaticResource TitleLabelStyle}" Content="Bejelentkezés"/>
             <TextBox Style="{StaticResource LoginTextBoxStyle}" x:Name="tb_Username"/>
             <PasswordBox Style="{StaticResource LoginPasswordBoxStyle}" x:Name="tb_Password"/>
@@ -25,6 +21,17 @@
                 <Button Style="{StaticResource BaseButtonStyle}" x:Name="btn_register" Click="btn_register_Click">Regisztráció</Button>
             </StackPanel>
         </StackPanel>
-
+        <StackPanel Grid.Column="0" Orientation="Horizontal"  HorizontalAlignment="Center">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="0.38*"></RowDefinition>
+                    <RowDefinition Height="0.24*"></RowDefinition>
+                    <RowDefinition Height="0.25*"></RowDefinition>
+                    <RowDefinition Height="0.58*"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Label Width="auto" Grid.Row="2" Height="30" Style="{StaticResource Jelszolabel}" FontSize="18" x:Name="Jelszolabel" Content="Password:"/>
+                <Label Width="auto" Grid.Row="1" Height="30" Style="{StaticResource Jelszolabel}" FontSize="18" Content="User Name:"/>
+            </Grid>
+        </StackPanel>
     </Grid>
 </Window>

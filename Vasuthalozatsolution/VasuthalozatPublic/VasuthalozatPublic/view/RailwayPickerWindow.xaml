@@ -14,11 +14,15 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="*"></RowDefinition>
             <RowDefinition Height="*"></RowDefinition>
-            <RowDefinition Height="7*"></RowDefinition>
+            <RowDefinition Height="5*"></RowDefinition>
         </Grid.RowDefinitions>
         <Label Grid.Column="0" Grid.Row="0" Style="{StaticResource SmallerTitleLabelStyle}" x:Name="la_title" Content="Üdv: "></Label>
         <Button Grid.Column="3" Grid.Row="0" Style="{StaticResource LogoutButtonStyle}" x:Name="btn_logout" Click="btn_logout_Click">Kijelentkezés</Button>
-        <Label Grid.Column="0" Grid.Row="2"></Label>
+        <StackPanel Grid.Row="1">
+            <Label>alma</Label>
+            <TextBox></TextBox>
+        </StackPanel>
+        
         <ListView Grid.Column="0" Grid.Row="3"></ListView>
     </Grid>
 </Window>
