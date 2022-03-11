@@ -49,5 +49,10 @@ namespace VasuthalozatPublic.View
         {
             railwayPickerController.Logout();
         }
+
+        private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
     }
 }

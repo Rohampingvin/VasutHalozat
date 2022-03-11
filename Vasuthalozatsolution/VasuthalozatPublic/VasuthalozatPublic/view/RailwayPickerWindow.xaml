@@ -18,11 +18,15 @@
         </Grid.RowDefinitions>
         <Label Grid.Column="0" Grid.Row="0" Style="{StaticResource SmallerTitleLabelStyle}" x:Name="la_title" Content="Üdv: "></Label>
         <Button Grid.Column="3" Grid.Row="0" Style="{StaticResource LogoutButtonStyle}" x:Name="btn_logout" Click="btn_logout_Click">Kijelentkezés</Button>
-        <StackPanel Grid.Row="1">
-            <Label>alma</Label>
-            <TextBox></TextBox>
+        <StackPanel Grid.Row="1" Orientation="Horizontal" >
+            <StackPanel  Orientation="Horizontal">
+                <Label VerticalAlignment="Center" TextBlock.FontSize="20">Kiindulópont:</Label>
+                <ComboBox Width="130" Height="30"></ComboBox>
+            </StackPanel >
+            <Label VerticalAlignment="Center" TextBlock.FontSize="20">Célállomás:</Label>
+            <ComboBox Width="130" Height="30"></ComboBox>
         </StackPanel>
         
-        <ListView Grid.Column="0" Grid.Row="3"></ListView>
+        <ListView Grid.Column="0" Grid.Row="3" Height="300"></ListView>
     </Grid>
 </Window>
