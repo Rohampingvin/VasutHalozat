@@ -13,7 +13,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VasuthalozatAdmin", "Vasuth
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "VasuthalozatCommon", "VasuthalozatCommon", "{A86F2E4F-6EB9-4505-888A-2F70F016DE21}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VasuthalozatCommon", "VasuthalozatCommon\VasuthalozatCommon.csproj", "{6B67D1EF-25CA-40B0-82A6-1CAEDC27E393}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VasuthalozatCommon", "VasuthalozatCommon\VasuthalozatCommon.csproj", "{6B67D1EF-25CA-40B0-82A6-1CAEDC27E393}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

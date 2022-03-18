@@ -1,9 +1,9 @@
-﻿<Window x:Class="VasuthalozatPublic.View.RailwayPicker"
+﻿<Window x:Class="VasuthalozatAdmin.views.AdminRailwayPicker"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:VasuthalozatPublic.View"
+        xmlns:local="clr-namespace:VasuthalozatAdmin.views"
         mc:Ignorable="d"
         Title="RailwayPicker" Style="{StaticResource WorkingWindowStyle}">
     <Grid>
@@ -18,6 +18,8 @@
         </Grid.RowDefinitions>
         <Label Grid.Column="0" Grid.Row="0" Style="{StaticResource SmallerTitleLabelStyle}" x:Name="la_title" Content="Üdv: "></Label>
         <Button Grid.Column="3" Grid.Row="0" Style="{StaticResource LogoutButtonStyle}" x:Name="btn_logout" Click="btn_logout_Click">Kijelentkezés</Button>
+        <Button Content="Felvesz" Grid.Column="1" Grid.Row="2" Height="100" Margin="0,0,0,-100"></Button>
+        <Button Content="Törlés" Grid.Column="1" Grid.Row="2" Height="100" Margin="0,0,0,100"></Button>
         <StackPanel Grid.Row="1" Orientation="Horizontal" >
             <StackPanel  Orientation="Horizontal">
                 <Label VerticalAlignment="Center" TextBlock.FontSize="20">Kiindulópont:</Label>
@@ -30,7 +32,10 @@
         <ListView Grid.Row="3" Style="{StaticResource ResourceKey=SelectedView}" x:Name="ListView">
             <ListView.View>
                 <GridView>
-                    <GridViewColumn/>
+                    <GridViewColumn Header="Id" DisplayMemberBinding="{Binding Id}" Width="50"/>
+                    <GridViewColumn Header="Honnan" DisplayMemberBinding="{Binding from}" Width="300"/>
+                    <GridViewColumn Header="Hová" DisplayMemberBinding="{Binding to}" Width="300"/>
+                    <GridViewColumn Header="Távolság" DisplayMemberBinding="{Binding distance}" Width="50"/>
                 </GridView>
             </ListView.View>
         </ListView>

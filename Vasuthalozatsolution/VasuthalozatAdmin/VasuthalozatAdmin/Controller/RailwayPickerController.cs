@@ -28,15 +28,5 @@ namespace VasuthalozatPublic.Controller
         {
             authenticator.Logout();
         }
-
-        public List<Cities> GetCities()
-        {
-            return Vasuthalozat.Cities.ToList();;
-        }
-        public void AddCity(Cities city)
-        {
-            Vasuthalozat.Cities.Add(city);
-            Vasuthalozat.SaveChanges();
-        }
     }
 }

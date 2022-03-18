@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using VasuthalozatPublic.Controller;
+using VasuthalozatCommon.Repository;
 
 namespace VasuthalozatPublic.View
 {
@@ -21,6 +22,7 @@ namespace VasuthalozatPublic.View
     public partial class RailwayPicker : Window
     {
         private RailwayPickerController railwayPickerController = new RailwayPickerController();
+        private VasuthalozatContext Vasuthalozat = VasuthalozatContext.Instance;
         public RailwayPicker()
         {
             WindowStartupLocation = WindowStartupLocation.Manual;
@@ -28,6 +30,11 @@ namespace VasuthalozatPublic.View
             Top = 200;
             InitializeComponent();
             railwayPickerController.SubscibeToLogout(UserAuthenticator_LogoutEvent);
+            foreach (var item in railwayPickerController.GetCities())
+            {
+                fromcb.Items.Add(item.Name);
+                wherecb.Items.Add(item.Name);
+            }
         }
 
         private void UserAuthenticator_LogoutEvent()
@@ -50,9 +57,24 @@ namespace VasuthalozatPublic.View
             railwayPickerController.Logout();
         }
 
-        private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void fromcb_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+            ListView.Items.Clear();
+            if (fromcb.SelectedIndex != null)
+            {
+                var s = Vasuthalozat.Railways.FirstOrDefault(r => r.FromCity.ToLower() == fromcb.SelectedItem.ToString().ToLower() && r.ToCity.ToLower() == wherecb.SelectedItem.ToString().ToLower() || r.FromCity.ToLower() == fromcb.SelectedItem.ToString().ToLower() && r.ToCity.ToLower() == fromcb.SelectedItem.ToString().ToLower());
+                ListView.Items.Add(s);
+            }
+        }
 
+        private void wherecb_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            ListView.Items.Clear();
+            if (fromcb.SelectedIndex != null)
+            {
+                var s = Vasuthalozat.Railways.FirstOrDefault(r => r.FromCity.ToLower() == fromcb.SelectedItem.ToString().ToLower() && r.ToCity.ToLower() == wherecb.SelectedItem.ToString().ToLower() || r.FromCity.ToLower() == wherecb.SelectedItem.ToString().ToLower() && r.ToCity.ToLower() == fromcb.SelectedItem.ToString().ToLower());
+                ListView.Items.Add(s);
+            }
         }
     }
 }

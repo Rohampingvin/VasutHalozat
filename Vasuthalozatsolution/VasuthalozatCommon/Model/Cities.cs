@@ -8,11 +8,14 @@ using System.ComponentModel.DataAnnotations;
 
 namespace VasuthalozatCommon.Model
 {
-    [Table("CITIES")]
-    public class City : AbstractBase
+    public class Cities : AbstractBase
     {
-       [Column("CITY_NAME")]
        
         public string Name { get; set; }
+
+        public string ToLower()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
