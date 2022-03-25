@@ -60,7 +60,7 @@ namespace VasuthalozatPublic.View
         private void fromcb_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             ListView.Items.Clear();
-            if (fromcb.SelectedIndex != null)
+            if (wherecb.SelectedItem != null)
             {
                 var s = Vasuthalozat.Railways.FirstOrDefault(r => r.FromCity.ToLower() == fromcb.SelectedItem.ToString().ToLower() && r.ToCity.ToLower() == wherecb.SelectedItem.ToString().ToLower() || r.FromCity.ToLower() == fromcb.SelectedItem.ToString().ToLower() && r.ToCity.ToLower() == fromcb.SelectedItem.ToString().ToLower());
                 ListView.Items.Add(s);
@@ -70,7 +70,7 @@ namespace VasuthalozatPublic.View
         private void wherecb_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             ListView.Items.Clear();
-            if (fromcb.SelectedIndex != null)
+            if (fromcb.SelectedItem != null)
             {
                 var s = Vasuthalozat.Railways.FirstOrDefault(r => r.FromCity.ToLower() == fromcb.SelectedItem.ToString().ToLower() && r.ToCity.ToLower() == wherecb.SelectedItem.ToString().ToLower() || r.FromCity.ToLower() == wherecb.SelectedItem.ToString().ToLower() && r.ToCity.ToLower() == fromcb.SelectedItem.ToString().ToLower());
                 ListView.Items.Add(s);

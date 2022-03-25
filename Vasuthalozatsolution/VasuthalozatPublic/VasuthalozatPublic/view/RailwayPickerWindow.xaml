@@ -27,10 +27,12 @@
             <ComboBox Width="130" Height="30" x:Name="wherecb" SelectionChanged="wherecb_SelectionChanged"></ComboBox>
         </StackPanel>
 
-        <ListView Grid.Row="3" Style="{StaticResource ResourceKey=SelectedView}" x:Name="ListView">
+        <ListView Style="{StaticResource ResourceKey=SelectedView}" x:Name="ListView" Grid.Row="2">
             <ListView.View>
                 <GridView>
-                    <GridViewColumn/>
+                    <GridViewColumn Header="Honnan" DisplayMemberBinding="{Binding FromCity}" Width="300"/>
+                    <GridViewColumn Header="Hová" DisplayMemberBinding="{Binding ToCity}" Width="300"/>
+                    <GridViewColumn Header="Távolság" DisplayMemberBinding="{Binding Distance}" Width="50"/>
                 </GridView>
             </ListView.View>
         </ListView>

@@ -37,6 +37,11 @@ namespace VasuthalozatAdmin.view
                 fromcb.Items.Add(item.Name);
                 wherecb.Items.Add(item.Name);
             }
+            foreach (var city in Vasuthalozat.GetCities())
+            {
+                fromcb.Items.Add(city.Name);
+                wherecb.Items.Add(city.Name);
+            }
         }
 
         private void UserAuthenticator_LogoutEvent()
@@ -61,21 +66,17 @@ namespace VasuthalozatAdmin.view
 
         private void fromcb_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            ListView.Items.Clear();
-            if (fromcb.SelectedIndex != null)
+            if (wherecb.SelectedItem != null)
             {
                 var s = Vasuthalozat.Railways.FirstOrDefault(r => r.FromCity.ToLower() == fromcb.SelectedItem.ToString().ToLower() && r.ToCity.ToLower() == wherecb.SelectedItem.ToString().ToLower() || r.FromCity.ToLower() == fromcb.SelectedItem.ToString().ToLower() && r.ToCity.ToLower() == fromcb.SelectedItem.ToString().ToLower());
-                ListView.Items.Add(s);
             }
         }
 
         private void wherecb_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            ListView.Items.Clear();
-            if (fromcb.SelectedIndex != null)
+            if (fromcb.SelectedItem != null)
             {
                 var s = Vasuthalozat.Railways.FirstOrDefault(r => r.FromCity.ToLower() == fromcb.SelectedItem.ToString().ToLower() && r.ToCity.ToLower() == wherecb.SelectedItem.ToString().ToLower() || r.FromCity.ToLower() == wherecb.SelectedItem.ToString().ToLower() && r.ToCity.ToLower() == fromcb.SelectedItem.ToString().ToLower());
-                ListView.Items.Add(s);
             }
         }
 
@@ -125,6 +126,25 @@ namespace VasuthalozatAdmin.view
                 }
             }
             ListView.ItemsSource = Vasuthalozat.GetRailways();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            var railway = new Railway()
+            {
+                FromCity = fromcb.SelectedItem.ToString(),
+                ToCity = wherecb.SelectedItem.ToString(),
+                Distance = int.Parse(tav_text.Text)
+            };
+            var s = Vasuthalozat.Railways.FirstOrDefault(r => r.FromCity.ToLower() == railway.FromCity.ToLower() && r.ToCity.ToLower() == railway.ToCity.ToLower() || r.FromCity.ToLower() == railway.ToCity.ToLower() && r.ToCity.ToLower() == railway.FromCity.ToLower());
+            if (s == null)
+            {
+                Vasuthalozat.CreateRailway(railway);
+            }
+            else
+            {
+                MessageBox.Show("Ilyen útvonal már létezik!", "Exists", MessageBoxButton.OK);
+            }
         }
     }
 }

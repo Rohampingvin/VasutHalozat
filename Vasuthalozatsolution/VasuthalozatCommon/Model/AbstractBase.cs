@@ -10,8 +10,6 @@ namespace VasuthalozatCommon.Model
 {
     public abstract class AbstractBase
     {
-        [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public long Id { get; set; }
     }
 }

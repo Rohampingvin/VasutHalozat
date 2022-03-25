@@ -10,8 +10,6 @@ namespace VasuthalozatCommon.Model
 {
     public class Cities : AbstractBase
     {
-       
         public string Name { get; set; }
-
     }
 }

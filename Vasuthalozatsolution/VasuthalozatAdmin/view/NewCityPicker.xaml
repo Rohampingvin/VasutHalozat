@@ -7,8 +7,8 @@
         mc:Ignorable="d"
         Title="NewCityPicker" Style="{StaticResource ResourceKey=BaseWindowStyle}">
     <Grid>
-        <Button Content="Hozzáadás" Style="{StaticResource ResourceKey=AddCity}"/>
-        <Button Content="Mégse" Style="{StaticResource ResourceKey=AddCityBack}"/>
+        <Button Content="Hozzáadás" Style="{StaticResource ResourceKey=AddCity }" Click="Button_Click_1"/>
+        <Button Content="Mégse" Style="{StaticResource ResourceKey=AddCityBack}" Click="Button_Click"/>
         <TextBox x:Name="AddCityInput" Style="{StaticResource ResourceKey=AddCityInput}"/>
     </Grid>
 </Window>

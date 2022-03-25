@@ -29,14 +29,16 @@
         <Button Grid.Column="2" Grid.Row="2" Height="100" Content="Delete" Margin="0,0,0,0" x:Name="Button_delete" Click="Button_delete_Click"></Button>
         <Button Grid.Column="2" Grid.Row="2" Height="100" Content="Add" Margin="0,0,0,200" x:Name="Button_add" Click="Button_add_Click" ></Button>
         <Button Grid.Column="2" Grid.Row="2" Height="100" Content="Update" Margin="0,0,0,-200" x:Name="Button_update" Click="Button_update_Click"></Button>
-
+        <Button Grid.Column="2" Grid.Row="1" Width="170" Height="70" Content="Hozzáad" Click="Button_Click"></Button>
+        <Label Grid.Column="0" Grid.Row="1" Content="Távolság:" Margin="300 0 0 0" FontSize="22" VerticalAlignment="Center" Width="100"></Label>
+        <TextBox Grid.Row="1" Grid.Column="0" Width="200" Height="30" Margin="600 0 0 0" x:Name="tav_text" VerticalAlignment="Center" HorizontalAlignment="Center" TextAlignment="Center" HorizontalContentAlignment="Center"  VerticalContentAlignment="Center"></TextBox>
         <ListView Style="{StaticResource ResourceKey=SelectedView}" x:Name="ListView" Grid.Row="2">
             <ListView.View>
                 <GridView>
                     <GridViewColumn Header="Id" DisplayMemberBinding="{Binding Id}" Width="50"/>
-                    <GridViewColumn Header="Honnan" DisplayMemberBinding="{Binding from}" Width="300"/>
-                    <GridViewColumn Header="Hová" DisplayMemberBinding="{Binding to}" Width="300"/>
-                    <GridViewColumn Header="Távolság" DisplayMemberBinding="{Binding distance}" Width="50"/>
+                    <GridViewColumn Header="Honnan" DisplayMemberBinding="{Binding FromCity}" Width="300"/>
+                    <GridViewColumn Header="Hová" DisplayMemberBinding="{Binding ToCity}" Width="300"/>
+                    <GridViewColumn Header="Távolság" DisplayMemberBinding="{Binding Distance}" Width="50"/>
                 </GridView>
             </ListView.View>
             </ListView>
