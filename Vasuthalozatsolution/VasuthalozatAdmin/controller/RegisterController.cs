@@ -7,9 +7,9 @@ using VasuthalozatCommon.Repository;
 using VasuthalozatCommon.Model.UserHandling;
 using VasuthalozatCommon.RailwayException;
 
-namespace VasuthalozatPublic.Controller
+namespace VasuthalozatAdmin.controller
 {
-    public class RegisterController
+    class RegisterController
     {
         private UserContext userContext = UserContext.Instance;
 
@@ -24,10 +24,10 @@ namespace VasuthalozatPublic.Controller
                 throw new VasuthalozatException("Ilyen felhasználónévvel vagy email címmel már regisztráltak");
             }
             userContext.Users.Add(new User(
-                name, 
-                username, 
+                name,
+                username,
                 email,
-                BCrypt.Net.BCrypt.HashPassword(password1, BCrypt.Net.BCrypt.GenerateSalt()), 
+                BCrypt.Net.BCrypt.HashPassword(password1, BCrypt.Net.BCrypt.GenerateSalt()),
                 Role.USER));
 
             userContext.SaveChanges();

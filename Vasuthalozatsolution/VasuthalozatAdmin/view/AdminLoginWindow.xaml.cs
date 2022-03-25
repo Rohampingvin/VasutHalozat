@@ -12,22 +12,26 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using VasuthalozatCommon.RailwayException;
-using VasuthalozatPublic.Controller;
+using VasuthalozatAdmin.controller;
 
-namespace VasuthalozatAdmin.views
+namespace VasuthalozatAdmin.view
 {
     /// <summary>
-    /// Interaction logic for AdminLogin.xaml
+    /// Interaction logic for AdminLoginWindow.xaml
     /// </summary>
-    public partial class AdminLogin : Window
+    public partial class AdminLoginWindow : Window
     {
+        
         private LoginController loginController = new LoginController();
-        public AdminLogin()
+        public AdminLoginWindow()
         {
+            WindowStartupLocation = WindowStartupLocation.Manual;
+            Left = 500;
+            Top = 200;
             InitializeComponent();
         }
 
-        public AdminLogin(string usernameText) : this()
+        public AdminLoginWindow(string usernameText) : this()
         {
             tb_Username.Text = usernameText;
         }
@@ -37,10 +41,10 @@ namespace VasuthalozatAdmin.views
             try
             {
                 var user = loginController.HandleLoginAttempt(tb_Username.Text, tb_Password.Password);
-                AdminRailwayPicker railwayPicker = new AdminRailwayPicker(user.Name);
+                AdminRailwayPickerWindow railwayPicker = new AdminRailwayPickerWindow(user.Name);
                 railwayPicker.Left = this.Left;
                 railwayPicker.Top = this.Top;
-                AdminRailwayPicker.GetWindow(railwayPicker).Show();
+                AdminRailwayPickerWindow.GetWindow(railwayPicker).Show();
                 this.Close();
             }
             catch (VasuthalozatException exc)
@@ -51,10 +55,10 @@ namespace VasuthalozatAdmin.views
 
         private void btn_register_Click(object sender, RoutedEventArgs e)
         {
-            AdminRegister registerWindow = new AdminRegister();
+            AdminRegisterWindow registerWindow = new AdminRegisterWindow();
             registerWindow.Left = this.Left;
             registerWindow.Top = this.Top;
-            AdminRegister.GetWindow(registerWindow).Show();
+            AdminRegisterWindow.GetWindow(registerWindow).Show();
             this.Close();
         }
     }

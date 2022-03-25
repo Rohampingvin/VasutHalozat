@@ -12,10 +12,10 @@ namespace VasuthalozatCommon.Model
     public class Railway : AbstractBase
     {
         [Column("FROM_CITY")]
-        public Cities FromCity { get; set; }
+        public String FromCity { get; set; }
 
         [Column("TO_CITY")]
-        public Cities ToCity { get; set; }
+        public String ToCity { get; set; }
 
         [Column("DISTANCE")]
         public int Distance { get; set; }

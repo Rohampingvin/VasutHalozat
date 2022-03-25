@@ -13,9 +13,5 @@ namespace VasuthalozatCommon.Model
        
         public string Name { get; set; }
 
-        public string ToLower()
-        {
-            throw new NotImplementedException();
-        }
     }
 }

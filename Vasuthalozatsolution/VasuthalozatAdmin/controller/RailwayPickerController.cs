@@ -7,9 +7,10 @@ using VasuthalozatCommon.Auth;
 using VasuthalozatCommon.Repository;
 using VasuthalozatCommon.Model;
 
-namespace VasuthalozatPublic.Controller
+
+namespace VasuthalozatAdmin.controller
 {
-    public class RailwayPickerController
+    class RailwayPickerController
     {
         private IAuthenticator authenticator = UserAuthenticator.Instance;
         private VasuthalozatContext Vasuthalozat = VasuthalozatContext.Instance;
@@ -27,6 +28,16 @@ namespace VasuthalozatPublic.Controller
         public void Logout()
         {
             authenticator.Logout();
+        }
+
+        public List<Cities> GetCities()
+        {
+            return Vasuthalozat.Cities.ToList(); ;
+        }
+        public void AddCity(Cities city)
+        {
+            Vasuthalozat.Cities.Add(city);
+            Vasuthalozat.SaveChanges();
         }
     }
 }

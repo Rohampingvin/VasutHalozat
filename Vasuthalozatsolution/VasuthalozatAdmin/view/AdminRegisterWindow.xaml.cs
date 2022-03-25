@@ -11,18 +11,18 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-using VasuthalozatPublic.Controller;
+using VasuthalozatAdmin.controller;
 using VasuthalozatCommon.RailwayException;
 
-namespace VasuthalozatAdmin.views
+namespace VasuthalozatAdmin.view
 {
     /// <summary>
-    /// Interaction logic for AdminRegister.xaml
+    /// Interaction logic for AdminRegisterWindow.xaml
     /// </summary>
-    public partial class AdminRegister : Window
+    public partial class AdminRegisterWindow : Window
     {
         private RegisterController registerController = new RegisterController();
-        public AdminRegister()
+        public AdminRegisterWindow()
         {
             WindowStartupLocation = WindowStartupLocation.Manual;
             Left = 500;
@@ -32,10 +32,10 @@ namespace VasuthalozatAdmin.views
 
         private void btn_back_Click(object sender, RoutedEventArgs e)
         {
-            AdminLogin loginWindow = new AdminLogin();
+            AdminLoginWindow loginWindow = new AdminLoginWindow();
             loginWindow.Left = this.Left;
             loginWindow.Top = this.Top;
-            AdminLogin.GetWindow(loginWindow).Show();
+            AdminLoginWindow.GetWindow(loginWindow).Show();
             this.Close();
         }
 
@@ -44,10 +44,10 @@ namespace VasuthalozatAdmin.views
             try
             {
                 registerController.HandleRegister(tb_username.Text, tb_password1.Password, tb_password2.Password, tb_email.Text, tb_name.Text);
-                AdminLogin loginWindow = new AdminLogin(tb_username.Text);
+                AdminLoginWindow loginWindow = new AdminLoginWindow(tb_username.Text);
                 loginWindow.Left = this.Left;
                 loginWindow.Top = this.Top;
-                AdminLogin.GetWindow(loginWindow).Show();
+                AdminLoginWindow.GetWindow(loginWindow).Show();
                 this.Close();
             }
             catch (VasuthalozatException exc)
